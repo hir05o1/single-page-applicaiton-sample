@@ -12,9 +12,9 @@ const route = (event) => {
 };
 
 const routes = {
-  404: "/pages/404.html",
-  "/": "/pages/index.html",
-  "/about": "/pages/about.html",
+  404: "../pages/404.html",
+  "/": "../pages/index.html",
+  "/about": "../pages/about.html",
 };
 
 const handleLocation = async () => {
@@ -25,7 +25,6 @@ const handleLocation = async () => {
   // htmlを取得
   const html = await fetch(route).then((data) => data.text());
   // 取得したhtmlを動的にルート直下のindex.htmlに差し込む
-  document.getElementById("main-page").innerHTML = html;
 };
 
 // ブラウザの戻るボタンや進むボタンが押されたときに発火されるイベント
